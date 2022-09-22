@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation "ai.djl:api:0.4.0"
+    implementation "ai.djl:repository:0.4.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-model-zoo:0.4.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-native-auto:1.4.0"
+    implementation files('C:/Users/Sherlock_H/Downloads/opencv4_5_5/opencv/build/java/opencv-455.jar')
+    implementation 'org.bytedeco:cuda-platform-redist:11.0-8.0-1.5.4'
+//    implementation "org.bytedeco.javacpp-presets:opencv-platform:4.5.5"
+//    implementation "org.bytedeco.javacpp-presets:opencv-platform:4.5.5-1.4.2"
+
+}
+
+test {
+    useJUnitPlatform()
+}
